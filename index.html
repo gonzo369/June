@@ -30,6 +30,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 90%;
             max-width: 500px;
+            box-sizing: border-box;
         }
         h1 {
             font-family: 'Courier New', Courier, monospace;
@@ -64,6 +65,10 @@
             border-color: #6a0dad;
             box-shadow: 0 0 8px rgba(106, 13, 173, 0.5);
         }
+        .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+        }
         @media (min-width: 600px) {
             li {
                 flex-direction: row;
@@ -84,76 +89,83 @@
 </head>
 <body>
     <form action="prosess.php" method="post">
-
         <main>
             <h1>Pride Month's Registration Form</h1>
-    <ul>
-        <li>
-            <label for="name">Name</label>
-            <input class="styled-input" type="text" id="name" placeholder="First Name">
-            <input class="styled-input" type="text" id="last" placeholder="Last Name">
-        </li>
-        <li>
-            <label for="address">Address</label>
-            <input class="styled-input" type="text" id="address" placeholder="Address">
-        </li>
-        <li>
-            <label for="city">City</label>
-            <input class="styled-input" type="text" id="city" placeholder="City">
-            <input class="styled-input" type="text" id="region" placeholder="Region">
-        </li>
-        <li>
-            <label for="zip">Zip Code</label>
-            <input class="styled-input" type="text" id="zip" placeholder="Zip Code">
-        </li>
-        <li>
-            <label for="stateSelector">State</label>
-            <select class="styled-input" id="stateSelector">
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                <option value="Assam">Assam</option>
-                <option value="Bihar">Bihar</option>
-                <option value="Chhattisgarh">Chhattisgarh</option>
-                <option value="Goa">Goa</option>
-                <option value="Gujarat">Gujarat</option>
-                <option value="Haryana">Haryana</option>
-                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                <option value="Jharkhand">Jharkhand</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Kerala">Kerala</option>
-                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                <option value="Maharashtra">Maharashtra</option>
-                <option value="Manipur">Manipur</option>
-                <option value="Meghalaya">Meghalaya</option>
-                <option value="Mizoram">Mizoram</option>
-                <option value="Nagaland">Nagaland</option>
-                <option value="Odisha">Odisha</option>
-                <option value="Punjab">Punjab</option>
-                <option value="Rajasthan">Rajasthan</option>
-                <option value="Sikkim">Sikkim</option>
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Telangana">Telangana</option>
-                <option value="Tripura">Tripura</option>
-                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                <option value="Uttarakhand">Uttarakhand</option>
-                <option value="West Bengal">West Bengal</option>
-            </select>
-        </li>
-        <li>
-            <label for="email">Email</label>
-            <input class="styled-input" type="email" id="email" placeholder="Email">
-            <input class="styled-input" type="password" id="password" placeholder="Password">
-        </li>
-        <li>
-            <label for="contact">Contact Number</label>
-            <input class="styled-input" type="tel" id="phone" placeholder="Phone Number">
-            <input class="styled-input" type="tel" id="telephone" placeholder="Telephone Number">
-        </li>
-        <li><a href="about.html" target="_blank"><input type="submit" value="submit">
-        </a></li>
-        
-    </ul>
-</main>
-</form>
+            <ul>
+                <li>
+                    <label for="name">Name</label>
+                    <input class="styled-input" type="text" id="name" name="first_name" placeholder="First Name">
+                    <input class="styled-input" type="text" id="last" name="last_name" placeholder="Last Name">
+                </li>
+                <li>
+                    <label for="gender">Gender</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="gender" value="male"> Male</label>
+                        <label><input type="checkbox" name="gender" value="female"> Female</label>
+                    </div>
+                </li>
+                <li>
+                    <label for="address">Address</label>
+                    <input class="styled-input" type="text" id="address" name="address" placeholder="Address">
+                </li>
+                <li>
+                    <label for="city">City</label>
+                    <input class="styled-input" type="text" id="city" name="city" placeholder="City">
+                    <input class="styled-input" type="text" id="region" name="region" placeholder="Region">
+                </li>
+                <li>
+                    <label for="zip">Zip Code</label>
+                    <input class="styled-input" type="text" id="zip" name="zip" placeholder="Zip Code">
+                </li>
+                <li>
+                    <label for="stateSelector">State</label>
+                    <select class="styled-input" id="stateSelector" name="state">
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input class="styled-input" type="email" id="email" name="email" placeholder="Email">
+                    <input class="styled-input" type="password" id="password" name="password" placeholder="Password">
+                </li>
+                <li>
+                    <label for="contact">Contact Number</label>
+                    <input class="styled-input" type="tel" id="phone" name="phone" placeholder="Phone Number">
+                    <input class="styled-input" type="tel" id="telephone" name="telephone" placeholder="Telephone Number">
+                </li>
+                <li>
+                    <input type="submit" value="Submit">
+                    <a href="about.html" target="_blank">Demo</a>
+                </li>
+            </ul>
+        </main>
+    </form>
 </body>
 </html>
